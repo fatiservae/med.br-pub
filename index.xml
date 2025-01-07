@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-	<title>Aesclepius</title>
-	<link>https://www.aesclepius.com.br/</link>
-	<description>Recent content on Aesclepius</description>
+	<title>Dr. Jefferson T.</title>
+	<link>https://www.jefferson.med.br/</link>
+	<description>Recent content on Dr. Jefferson T.</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
     
-        <atom:link href="https://www.aesclepius.com.br/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.jefferson.med.br/index.xml" rel="self" type="application/rss+xml" />
 	
 	
 	</channel>

@@ -5,19 +5,42 @@
   
   
   
-  <title>Aesclepius</title>
-  <link rel="canonical" href="https://www.aesclepius.com.br/">
-  <link rel='alternate' type='application/rss+xml' title="Aesclepius RSS" href='./index.xml'>
+  <title>Dr. Jefferson T.</title>
+  <link rel="canonical" href="https://www.jefferson.med.br/">
+  <link rel='alternate' type='application/rss+xml' title="Dr. Jefferson T. RSS" href='./index.xml'>
   <link rel='stylesheet' type='text/css' href='./style.css'>
-  <link rel="icon" href="./favicon.webp">
+  <link rel="icon" href="./favicon.jpg">
   <meta name="description" content="
+  
+    
+    Agenda e contato
+    Agende seu atendimento diretamente por WhatsApp.
+  
+  
+    Teleconsultas
+    
+        Doenças crônicas:
+            
+                Hipertensão arterial sistêmica
+                Diabetes Mellitus
+                Obesidade e hipercolesterolemia
+            
+        Psiquiatria
+        Pré-natal
+        Puericultura
+    
+  
+  
+    Consulta domiciliar
+    
+       Diagnósticos dermatológicos
+       Avaliação cardiológica
+       Avaliação desportiva
+       Avaliação geriátrica
+    
+  
 
-  
-    
-    
-    
-  
-  ">
+">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
   <meta charset="utf-8">
@@ -49,47 +72,37 @@
   
   
   
-    <style>
-    body { margin: 0; overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100vh; }
-    .card-container { position: relative; width: 300px; height: 400px; }
-    .card { position: absolute; width: 100%; height: 100%; border-radius: 15px; background: lightblue; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: transform 0.5s ease-out; }
-    .card:nth-child(1) { background: lightcoral; }
-    .card:nth-child(2) { background: lightgreen; }
-    .card:nth-child(3) { background: lightskyblue; }
-</style>
-<body>
-  <div class="card-container">
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
+    <div class="container">
+  <div class="card" onclick="topDiv(this)">
+    <img class=decorate src=./pix/zap.png></img>
+    <h2>Agenda e contato</h2>
+    <p>Agende seu atendimento diretamente por <a href=https://web.whatsapp.com/send/?phone=5561998739933&text=Ola+\n+quero+agendar+consulta.!"><span style="color: green; font-weight: bold">WhatsApp</span></a>.</p>
   </div>
-  <script>
-    const cards = document.querySelectorAll('.card');
-    let currentCard = 0;
-<pre><code>document.body.addEventListener('pointerdown', startSwipe);
-let startX = 0;
-
-function startSwipe(event) {
-  startX = event.clientX;
-  document.body.addEventListener('pointerup', endSwipe);
-}
-
-function endSwipe(event) {
-  let endX = event.clientX;
-  if (endX &lt; startX - 50) nextCard();
-  document.body.removeEventListener('pointerup', endSwipe);
-}
-
-function nextCard() {
-  if (currentCard &lt; cards.length - 1) {
-    cards[currentCard].style.transform = &quot;translateX(-100%)&quot;;
-    currentCard++;
-  }
-}
-</code></pre>
-<p></script></p>
-</body>
-</html>
+  <div class="card" onclick="topDiv(this)">
+    <h2>Teleconsultas</h2>
+    <ul>
+        <li>Doenças crônicas:</li>
+            <ul>
+                <li>Hipertensão arterial sistêmica</li>
+                <li>Diabetes Mellitus</li>
+                <li>Obesidade e hipercolesterolemia</li>
+            </ul>
+        <li>Psiquiatria</li>
+        <li>Pré-natal</li>
+        <li>Puericultura</li>
+    <ul>
+  </div>
+  <div class="card" onclick="topDiv(this)">
+    <h2>Consulta domiciliar</h2>
+    <ul>
+       <li>Diagnósticos dermatológicos</li>
+       <li>Avaliação cardiológica</li>
+       <li>Avaliação desportiva</li>
+       <li>Avaliação geriátrica</li>
+    <ul>
+  </div>
+</div>
+<script src="./script.js"></script>
 
   
   
@@ -108,7 +121,7 @@ function nextCard() {
   <footer>
     <hr>
 <br>
-<a href="https://www.jeffersontorres.com.br">By Jefferson T. - @fatiservae - 2024 </a>
+<a href="https://www.jeffersontorres.com.br">By Jefferson T. - @fatiservae - 2025 </a>
 <br>
 <br>
 <br>
