@@ -717,10 +717,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0px;
   margin: 1.5ch;
   font-weight: bold;
+  white-space: nowrap;
   color: var(--headingsColor);
 }
 h1, h2 {
   font-size: 110%;
+}
+h1 {
+  color: gray;
 }
 h3, h4, h5, h6 {
   font-size: 100%;
@@ -838,8 +842,8 @@ hr {
 
 .card {
   padding: 1rem;
-  height: 400px;
-  width: 550px;
+  height: 60vh;
+  width: 68vw;
   background-color: gray;
   border-radius: 10px;
   box-shadow: -1rem 0 3rem black;
@@ -849,18 +853,28 @@ hr {
 
 .card:nth-child(1) { 
   margin-top: 5ch;
-  margin-left: 0ch;
-  background: lightcoral; 
+  margin-left: -3ch;
+  --fundoCard: lightcoral;
+  background: var(--fundoCard);  
   z-index: 3; }
 .card:nth-child(2) { 
-  margin-top: 15ch;
+  margin-top: 0ch;
   margin-left: -12ch;
-  background: lightgreen; 
+  --fundoCard: lightgreen; 
+  background: var(--fundoCard);  
   z-index: 2; }
 .card:nth-child(3) { 
-  margin-top: 8ch;
-  margin-left: -15ch;
-  background: lightskyblue; 
+  margin-top: 10ch;
+  margin-left: -30ch;
+  --fundoCard: lightskyblue; 
+  background: var(--fundoCard);  
+  z-index: 1; 
+}
+.card:nth-child(4) { 
+  margin-top: 12ch;
+  margin-left: -34ch;
+  --fundoCard: darkred; 
+  background: var(--fundoCard);  
   z-index: 1; 
 }
 
@@ -934,4 +948,15 @@ svg {
 .card:hover {
   stroke-dashoffset: 100;
   transition: 0.6s ease-out;
+}
+
+.eu {
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+.eu img{
+  border-radius: 100%;
+  max-width: 90%;
+  border: 3px solid black;
 }

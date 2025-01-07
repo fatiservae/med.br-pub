@@ -8,8 +8,8 @@ function topDiv(element) {
     cards[i].style.boxShadow = "-1rem 0 3rem black";
   }
 
-  element.style.border = "2px solid black";
-  element.style.boxShadow = "-1rem 0 3rem tomato";
+  element.style.border = "1px solid black";
+  element.style.boxShadow = "-1rem 0 1rem var(--fundoCard)";
   if (zIndex < 999) {
     element.classList.toggle("top");
     element.style.zIndex = 999;
