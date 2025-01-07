@@ -851,7 +851,7 @@ hr {
 
 .card {
   padding: 1rem;
-  height: 60vh;
+  height: fit-content;
   width: 68vw;
   border-radius: 10px;
   box-shadow: -1rem 0 3rem black;
@@ -860,18 +860,32 @@ hr {
   background: #282828;
 }
 
+.card ul {
+  padding: 2%;
+  margin: 2%;
+}
+
+
 .card:nth-child(1) { 
   margin-top: 5ch;
   margin-left: -3ch;
-  --fundoCard: lightcoral;
-  background: var(--fundoCard);  
-  z-index: 3; }
+  z-index: 3; 
+  background-color: lightcoral;  
+  background-image: radial-gradient(pink 0.8px,transparent 0);
+  background-size: 3px 3px;
+  background-position: -2px -2px;
+}
 .card:nth-child(2) { 
   margin-top: 0ch;
   margin-left: -12ch;
   --fundoCard: lightgreen; 
   background: var(--fundoCard);  
-  z-index: 2; }
+  z-index: 2; 
+  background-color: lightgreen ;  
+  background-image: radial-gradient(white 0.8px,transparent 0);
+  background-size: 5px 5px;
+  background-position: -5px -5px;
+}
 .card:nth-child(3) { 
   margin-top: 10ch;
   margin-left: -30ch;
@@ -880,11 +894,11 @@ hr {
   background-color: #ffffea;  
   background-image: radial-gradient(#aaffbb 0.8px,transparent 0);
   background-size: 5px 5px;
-  background-position: -15px -15px;
+  background-position: -5px -5px;
 }
 .card:nth-child(4) { 
-  margin-top: 12ch;
-  margin-left: -34ch;
+  margin-top: 15ch;
+  margin-left: -33ch;
   z-index: 1; 
   background-color: #d6e6ff;  
   background-image: radial-gradient(#cbcbcb 0.8px,transparent 0);
