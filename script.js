@@ -8,10 +8,10 @@ function topDiv(element) {
     cards[i].style.boxShadow = "-1rem 0 3rem black";
   }
 
-  element.style.border = "1px solid black";
-  element.style.boxShadow = "-1rem 0 1rem var(--fundoCard)";
+  //element.style.border = "1px solid #404040";
+  //element.style.boxShadow = "-1rem 0 1rem var(--fundoCard)";
   if (zIndex < 999) {
-    element.classList.toggle("top");
+    //element.classList.toggle("top");
     element.style.zIndex = 999;
     //element.style.height = 300;
     //element.style.width = 240;
