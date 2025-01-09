@@ -5,33 +5,39 @@
 :root {
   --gradiente: radial-gradient(
                       ellipse at 50% 50%, 
-                      #bf398910 0, 
+                      blue 0, 
                       transparent 75%), 
                     radial-gradient(
-                      ellipse at 50% 50%, 
-                      #bf398910 0, 
-                      transparent 75%); 
+                      ellipse at 10% 50%, 
+                      tomato 0, 
+                      transparent 75%), 
+                    radial-gradient(
+                      ellipse at 60% 10%, 
+                      pink 0, 
+                      transparent 75%),
+                    radial-gradient(
+                    ellipse at 60% 90%, 
+                    pink 0, 
+                    transparent 75%); 
 
-  --backgroundColor: #282828;
-  background-color: #2384;  
-  background-image: radial-gradient(#303030 0.8px,transparent 0);
-  background-size: 5px 10px;
-  background-position: -15px -15px;
-  --z: 0;
+  background: var(--gradiente); 
+  --backgroundColor: #181818;
   /*
+  background: linear-gradient(54deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
+  --z: 0;
   */
   --stdTransition: background-color 0.2s ease;
   text-align: center;
   /* Manter --fonte para compatibildiade dos temas antigos e SVGs */
   --fonte: var(--fontColor); 
-  --vidro: rgba(6, 6, 4, .2);
+  --vidro: rgba(6, 6, 4, .6);
   --borders: 1px solid var(--fontColor);
   --borderRadius: 8px;
   --stdBorder: 1px solid var(--fontColor);
   color: var(--fontColor);
-  font-family: 'Fira sans';
+  font-family:  'Fira sans';
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
   background-color: var(--backgroundColor);
 }
 
@@ -101,6 +107,8 @@ body {
 }
 
 p {
+  margin: 0px;
+  padding: 0ch 1ch;
 }
 
 strong {
@@ -113,9 +121,8 @@ article {
 }
 
 footer {
-  background-color: var(--backgroundColor);
   font-size: 60%;
-  color: gray;
+  color: black;
 }
 
 button, select{
@@ -850,7 +857,6 @@ hr {
 }
 
 .card {
-  padding: 1rem;
   height: fit-content;
   width: 68vw;
   border-radius: 10px;
@@ -861,34 +867,46 @@ hr {
 }
 
 .card ul {
-  padding: 2%;
+  padding: none;
+  padding-left: 2%;
   margin: 2%;
 }
-
+.card ul li::marker {
+  content: none;
+}
+.card ul ul {
+  padding: 0px;
+}
 
 .card:nth-child(1) { 
-  margin-top: 5ch;
-  margin-left: -3ch;
-  z-index: 3; 
+  font-family:  "Stalemate";
+  font-size: 2.5rem;
+  font-style: bold;
+  color: white;
+  margin-top: 9ch;
+  margin-left: 1px;
+  z-index: 4; 
   background-color: lightcoral;  
-  background-image: radial-gradient(pink 0.8px,transparent 0);
+  background-image: radial-gradient(lightpink 0.8px,transparent 0);
   background-size: 3px 3px;
   background-position: -2px -2px;
 }
 .card:nth-child(2) { 
+  color: darkgreen;
   margin-top: 0ch;
-  margin-left: -12ch;
+  margin-left: -22ch;
   --fundoCard: lightgreen; 
   background: var(--fundoCard);  
   z-index: 2; 
   background-color: lightgreen ;  
-  background-image: radial-gradient(white 0.8px,transparent 0);
+  background-image: radial-gradient(#aaffff 0.8px,transparent 0);
   background-size: 5px 5px;
   background-position: -5px -5px;
 }
 .card:nth-child(3) { 
-  margin-top: 10ch;
-  margin-left: -30ch;
+  color: brown;
+  margin-top: 5ch;
+  margin-left: -40ch;
   --fundoCard: lightskyblue; 
   z-index: 1; 
   background-color: #ffffea;  
@@ -897,9 +915,10 @@ hr {
   background-position: -5px -5px;
 }
 .card:nth-child(4) { 
+  color: #0066dd;
   margin-top: 15ch;
-  margin-left: -33ch;
-  z-index: 1; 
+  margin-left: -23ch;
+  z-index: 3; 
   background-color: #d6e6ff;  
   background-image: radial-gradient(#cbcbcb 0.8px,transparent 0);
   background-size: 5px 5px;
@@ -943,22 +962,48 @@ hr {
   width: 150px;
 }
 
-.card .decorate {
-  width: 35%;
-}
-
 .card:hover {
   stroke-dashoffset: 100;
   transition: 0.6s ease-out;
 }
 
-.eu {
+.decorate {
+  position: relative;
+  top: 2rem;
   align-content: center;
   text-align: center;
   align-items: center;
 }
-.eu img{
+.decorate img{
   border-radius: 100%;
-  max-width: 90%;
+  max-width: 50%;
   border: 3px solid black;
+}
+
+.topo {
+
+}
+.body {
+  color: white;
+  border-radius: 0px 0px var(--borderRadius) var(--borderRadius);
+  background: var(--vidro);
+  margin: 0px;
+  border-top: 2px solid black; 
+  width: 100%;
+  height: 30%;
+  padding: 1ch 0ch;
+}
+
+.contact {
+  max-width: 40%;
+  padding: 1ch;
+}
+
+.card h2 {
+  text-align: center;
+}
+
+.social {
+  align-content: center;
+  text-align: center;
 }

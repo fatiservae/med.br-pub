@@ -1,19 +1,14 @@
 function topDiv(element) {
-  let zIndex = element.style.zIndex;
+  let zIndex = element.style.zIndex.value;
   let cards = document.getElementsByClassName("card");
+  let total = cards.length;
 
   for (let i = 0; i < cards.length; i++) {  
-    cards[i].style.zIndex = 0;
-    cards[i].style.border = "none";
-    cards[i].style.boxShadow = "-1rem 0 3rem black";
+    let actualIndex = cards[i].style.zIndex;
+    if (actualIndex = total) {
+      cards[i].style.zIndex = actualIndex - 1;
+    }
   }
 
-  //element.style.border = "1px solid #404040";
-  //element.style.boxShadow = "-1rem 0 1rem var(--fundoCard)";
-  if (zIndex < 999) {
-    //element.classList.toggle("top");
-    element.style.zIndex = 999;
-    //element.style.height = 300;
-    //element.style.width = 240;
-  }
+  element.style.zIndex = total;
 }
