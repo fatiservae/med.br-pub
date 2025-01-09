@@ -1012,8 +1012,11 @@ hr {
   align-content: center;
   text-align: center;
 }
-.crm {
+.crm, 
+.textcenter {
   text-align: center;
+}
+.crm {
   font-size: 14px;
-  font-family: 'fira sans'
+  font-family: 'fira sans';
 }
