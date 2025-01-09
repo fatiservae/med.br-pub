@@ -867,6 +867,10 @@ hr {
 }
 
 .card ul {
+  font-style: bold;
+  list-style: none;
+  -webkit-appearance: none; /* Remove estilos padrão */
+  appearance: none;
   padding: none;
   padding-left: 2%;
   margin: 2%;
@@ -984,6 +988,8 @@ hr {
 
 }
 .body {
+  padding: 1ch 0ch;
+  padding-top: 1rem;
   color: white;
   border-radius: 0px 0px var(--borderRadius) var(--borderRadius);
   background: var(--vidro);
@@ -991,7 +997,6 @@ hr {
   border-top: 2px solid black; 
   width: 100%;
   height: 30%;
-  padding: 1ch 0ch;
 }
 
 .contact {
@@ -1006,4 +1011,9 @@ hr {
 .social {
   align-content: center;
   text-align: center;
+}
+.crm {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'fira sans'
 }
