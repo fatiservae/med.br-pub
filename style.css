@@ -3,7 +3,7 @@
 }
 
 :root {
-  --margin-left: 1vw;
+  --margin-left: 1ch;
   --margin-top: 2vw;
   --gradiente: radial-gradient(
                       ellipse at 50% 50%, 
@@ -119,7 +119,6 @@ strong {
 
 article {
   text-align: start;
-  padding: 1rem;
   height: 100vh;
 }
 
@@ -853,7 +852,11 @@ hr {
     border: none;
   }
 }
-
+@media only screen and (min-width: 900px){
+  .card {
+    max-width: 450px;
+  }
+}
 .container {
   margin: auto none;
 }
@@ -861,11 +864,11 @@ hr {
 .card {
   position: absolute; /*Necessário para que .next e .previous herde*/
   height: fit-content;
-  width: 68vw;
+  width: 55vw;
   border-radius: 10px;
   box-shadow: -1rem 0 3rem black;
 /*   margin-left: -50px; */
-  transition: height 10s ease-in-out;
+  transition: height 1s ease-in-out;
   background: #282828;
 }
 
@@ -900,8 +903,8 @@ hr {
 }
 .card:nth-child(2) { 
   color: darkgreen;
-  margin-top: calc(var(--margin-top) + 5ch);
-  margin-left: calc(var(--margin-left) + 10vw);
+  margin-top: calc(var(--margin-top) + 8ch);
+  margin-left: calc(var(--margin-left) + 5ch);
   --fundoCard: lightgreen; 
   background: var(--fundoCard);  
   z-index: 99; 
@@ -912,8 +915,8 @@ hr {
 }
 .card:nth-child(3) { 
   color: brown;
-  margin-top: calc(var(--margin-top) + 8ch);
-  margin-left: calc(var(--margin-left) + 15vw);
+  margin-top: calc(var(--margin-top) + 16ch);
+  margin-left: calc(var(--margin-left) + 10ch);
   --fundoCard: lightskyblue; 
   z-index: 98; 
   background-color: #ffffea;  
@@ -923,8 +926,8 @@ hr {
 }
 .card:nth-child(4) { 
   color: #0066dd;
-  margin-top: calc(var(--margin-top) + 11ch);
-  margin-left: calc(var(--margin-left) + 20vw);
+  margin-top: calc(var(--margin-top) + 24ch);
+  margin-left: calc(var(--margin-left) + 15ch);
   z-index: 97; 
   background-color: #d6e6ff;  
   background-image: radial-gradient(#cbcbcb 0.8px,transparent 0);
@@ -933,8 +936,8 @@ hr {
 }
 .card:nth-child(5) { 
   color: black;
-  margin-top: calc(var(--margin-top) + 14ch);
-  margin-left: calc(var(--margin-left) + 25vw);
+  margin-top: calc(var(--margin-top) + 32ch);
+  margin-left: calc(var(--margin-left) + 20ch);
   z-index: 96; 
   background-color: #ffe6ff;  
   background-image: radial-gradient(#lightpink 0.8px,transparent 0);
