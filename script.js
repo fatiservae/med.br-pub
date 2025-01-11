@@ -1,14 +1,14 @@
 function topDiv(element) {
-  let zIndex = element.style.zIndex.value;
   let cards = document.getElementsByClassName("card");
-  let total = cards.length;
-
+  let topIndex = 0 ; 
   for (let i = 0; i < cards.length; i++) {  
-    let actualIndex = cards[i].style.zIndex;
-    if (actualIndex = total) {
-      cards[i].style.zIndex = actualIndex - 1;
+    let cardIndex = parseInt(window.getComputedStyle(cards[i]).zIndex, 10);
+    console.log(cardIndex);
+    if (cardIndex > topIndex) {
+      topIndex = cardIndex;
     }
-  }
+  } 
+  console.log(topIndex);
 
-  element.style.zIndex = total;
+  element.style.zIndex = topIndex + 1;
 }

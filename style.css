@@ -3,6 +3,8 @@
 }
 
 :root {
+  --margin-left: 1vw;
+  --margin-top: 2vw;
   --gradiente: radial-gradient(
                       ellipse at 50% 50%, 
                       blue 0, 
@@ -118,6 +120,7 @@ strong {
 article {
   text-align: start;
   padding: 1rem;
+  height: 100vh;
 }
 
 footer {
@@ -852,11 +855,11 @@ hr {
 }
 
 .container {
-  margin: auto auto;
-  display: flex;
+  margin: auto none;
 }
 
 .card {
+  position: absolute; /*Necessário para que .next e .previous herde*/
   height: fit-content;
   width: 68vw;
   border-radius: 10px;
@@ -887,9 +890,9 @@ hr {
   font-size: 2.5rem;
   font-style: bold;
   color: white;
-  margin-top: 9ch;
-  margin-left: 1px;
-  z-index: 4; 
+  margin-top: var(--margin-top);
+  margin-left: var(--margin-left);
+  z-index: 100; 
   background-color: lightcoral;  
   background-image: radial-gradient(lightpink 0.8px,transparent 0);
   background-size: 3px 3px;
@@ -897,11 +900,11 @@ hr {
 }
 .card:nth-child(2) { 
   color: darkgreen;
-  margin-top: 0ch;
-  margin-left: -22ch;
+  margin-top: calc(var(--margin-top) + 5ch);
+  margin-left: calc(var(--margin-left) + 10vw);
   --fundoCard: lightgreen; 
   background: var(--fundoCard);  
-  z-index: 2; 
+  z-index: 99; 
   background-color: lightgreen ;  
   background-image: radial-gradient(#aaffff 0.8px,transparent 0);
   background-size: 5px 5px;
@@ -909,10 +912,10 @@ hr {
 }
 .card:nth-child(3) { 
   color: brown;
-  margin-top: 5ch;
-  margin-left: -40ch;
+  margin-top: calc(var(--margin-top) + 8ch);
+  margin-left: calc(var(--margin-left) + 15vw);
   --fundoCard: lightskyblue; 
-  z-index: 1; 
+  z-index: 98; 
   background-color: #ffffea;  
   background-image: radial-gradient(#aaffbb 0.8px,transparent 0);
   background-size: 5px 5px;
@@ -920,15 +923,24 @@ hr {
 }
 .card:nth-child(4) { 
   color: #0066dd;
-  margin-top: 15ch;
-  margin-left: -23ch;
-  z-index: 3; 
+  margin-top: calc(var(--margin-top) + 11ch);
+  margin-left: calc(var(--margin-left) + 20vw);
+  z-index: 97; 
   background-color: #d6e6ff;  
   background-image: radial-gradient(#cbcbcb 0.8px,transparent 0);
   background-size: 5px 5px;
   background-position: -15px -15px;
 }
-
+.card:nth-child(5) { 
+  color: black;
+  margin-top: calc(var(--margin-top) + 14ch);
+  margin-left: calc(var(--margin-left) + 25vw);
+  z-index: 96; 
+  background-color: #ffe6ff;  
+  background-image: radial-gradient(#lightpink 0.8px,transparent 0);
+  background-size: 5px 5px;
+  background-position: -15px -15px;
+}
 /*
 .card:nth-child(4)::before {
   --fundoCard: darkred; 
@@ -1006,6 +1018,7 @@ hr {
 
 .card h2 {
   text-align: center;
+  font-size: 115%;
 }
 
 .social {
@@ -1019,4 +1032,27 @@ hr {
 .crm {
   font-size: 14px;
   font-family: 'fira sans';
+}
+
+.next,
+.previous {
+  display: none;
+  position: absolute;
+  top: 40%;
+  width: 10%;
+  height: 10%;
+}
+.next img,
+.previous img {
+  background: white;
+}
+.next {
+  right: -5ch;
+}
+.previous {
+  left: -5ch;
+}
+.card a {
+  color: lightblue;
+  font-weight: 500;
 }
