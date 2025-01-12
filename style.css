@@ -889,10 +889,6 @@ hr {
 }
 
 .card:nth-child(1) { 
-  font-family:  "Stalemate";
-  font-size: 2.5rem;
-  font-style: bold;
-  color: white;
   margin-top: var(--margin-top);
   margin-left: var(--margin-left);
   z-index: 100; 
@@ -1028,13 +1024,23 @@ hr {
   align-content: center;
   text-align: center;
 }
-.crm, 
-.textcenter {
+.social img {
+  max-width: 40%;
+}
+p.crm, 
+p.textcenter {
   text-align: center;
+  color: white;
+  white-space: nowrap;
+}
+p.textcenter {
+  font-family:  "Stalemate";
+  font-size: 2.5rem;
+  font-style: bold;
 }
 .crm {
-  font-size: 14px;
   font-family: 'fira sans';
+  font-size: 14px;
 }
 
 .next,
