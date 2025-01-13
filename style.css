@@ -55,6 +55,7 @@ article {
 }
 
 footer {
+  text-align: center;
   font-size: 60%;
   color: black;
 }
@@ -205,11 +206,16 @@ h4::before, h5::before, h6::before {
   margin-top: calc(var(--margin-top) + 32ch);
   margin-left: calc(var(--margin-left) + 20ch);
   z-index: 96; 
-  right: 1px !important;
   background-color: #ffe6ff;  
   background-image: radial-gradient(#lightpink 0.8px,transparent 0);
   background-size: 5px 5px;
   background-position: -15px -15px;
+}
+
+@media only screen and (max-width: 800px){
+  .card:nth-child(5) { 
+    right: 1px !important;
+  }
 }
 
 .card:hover {
@@ -263,7 +269,6 @@ h4::before, h5::before, h6::before {
   margin: 0px;
   border-top: 2px solid black; 
   width: 100%;
-  height: 30%;
 }
 
 .contact {
@@ -319,4 +324,8 @@ p.textcenter {
 .card a {
   color: lightblue;
   font-weight: 500;
+}
+
+hr {
+  width: 30%;
 }
