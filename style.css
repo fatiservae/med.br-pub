@@ -142,7 +142,7 @@ button:active {
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+/*  -webkit-appearance: none; */
   margin: 0;
 }
 /* Firefox */
@@ -873,12 +873,12 @@ hr {
 }
 
 .card ul {
-  font-style: bold;
-  list-style: none;
   /*
-  -webkit-appearance: none; /* Remove estilos padrão */
+  -webkit-appearance: none; 
   appearance: none;
   */
+  list-style: none;
+  font-style: bold;
   padding: none;
   padding-left: 2%;
   margin: 2%;
