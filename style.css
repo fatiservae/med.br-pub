@@ -155,8 +155,12 @@ h4::before, h5::before, h6::before {
 .card ul li::marker {
   content: none;
 }
-.card ul ul {
+.card ul ul li{
   padding: 0px;
+  padding-left: 1ch;
+}
+.card ul ul li::marker {
+  content: "•" ;
 }
 
 .card:nth-child(1) { 
