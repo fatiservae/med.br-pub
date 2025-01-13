@@ -875,8 +875,10 @@ hr {
 .card ul {
   font-style: bold;
   list-style: none;
+  /*
   -webkit-appearance: none; /* Remove estilos padrão */
   appearance: none;
+  */
   padding: none;
   padding-left: 2%;
   margin: 2%;
@@ -996,7 +998,6 @@ hr {
 }
 
 .topo {
-
 }
 .body {
   padding: 1ch 0ch;
