@@ -4,7 +4,7 @@
 :root {
   --highLightColor: springgreen;
   --linkColor: blue;
-  --margin-left: 1ch;
+  --margin-left: 2px;
   --margin-top: 2vw;
   --gradiente: radial-gradient(
                       ellipse at 50% 50%, 
@@ -285,15 +285,19 @@ h4::before, h5::before, h6::before {
   font-size: 115%;
 }
 
-.social {
-  align-content: center;
-  text-align: center;
-}
 .social img {
-  max-width: 40%;
+  border: 1px solid black;
+  border-radius: 100%;
+  max-width: 30%;
+  padding: 0px;
+  margin: 1ch;
 }
+.social a {
+}
+
 p.crm, 
 p.textcenter {
+  padding: 0px;
   text-align: center;
   color: white;
   white-space: nowrap;
