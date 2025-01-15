@@ -1,0 +1,337 @@
+* {
+}
+
+:root {
+  --highLightColor: springgreen;
+  --linkColor: blue;
+  --margin-left: 2px;
+  --margin-top: 2vw;
+  --gradiente: radial-gradient(
+                      ellipse at 50% 50%, 
+                      blue 0, 
+                      transparent 75%), 
+                    radial-gradient(
+                      ellipse at 10% 50%, 
+                      tomato 0, 
+                      transparent 75%), 
+                    radial-gradient(
+                      ellipse at 60% 10%, 
+                      pink 0, 
+                      transparent 75%),
+                    radial-gradient(
+                    ellipse at 60% 90%, 
+                    pink 0, 
+                    transparent 75%); 
+
+  background: var(--gradiente); 
+  --backgroundColor: #181818;
+  --vidro: rgba(6, 6, 4, .6);
+  --borderRadius: 8px;
+  font-family:  'Fira sans';
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+::selection {
+}
+
+body {
+  margin-top: 2ch;
+  align-items: center;
+}
+
+p {
+  padding-left: 1ch;
+  margin: 0px;
+}
+
+strong {
+  font-weight: 500;
+}
+
+article {
+  text-align: start;
+  height: 100vh;
+}
+
+footer {
+  text-align: center;
+  font-size: 60%;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: var(--linkColor);
+}
+a:hover{
+  text-decoration: underline;
+}
+
+mark {
+  color: black;
+  background-color: var(--highLightColor);
+  position: relative;
+  white-space: nowrap;
+  display: inline;
+  z-index: +1;
+}
+mark::before,
+mark::after{
+  background-color: var(--highLightColor);
+  content: "";
+  position: absolute;
+  width: calc(100% + 6px);
+  height: 100%;
+  left: -2px;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(-4deg);
+}
+
+img {
+  max-height: 40vw;
+  border-radius: 4px;
+  max-width: 95%;
+}
+figcaption {
+  font-size: 90%;
+  font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  padding: 0px;
+  margin: 1.5ch;
+  font-weight: bold;
+}
+h1, h2 {
+  font-size: 130%;
+}
+h1 {
+  color: gray;
+}
+h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: 400;
+}
+h4, h5, h6 {
+  font-weight: 300;
+}
+h3::before, h4::before, h5::before, h6::before {
+  content: "\00a0 \00a0";
+}
+h4::before, h5::before, h6::before {
+  content: "\00a0 \00a0 \00a0 \00a0";
+}
+
+/* Mediaqueries */
+@media only screen and (min-width: 900px){
+  .card {
+    max-width: 450px;
+  }
+}
+
+.container {
+  margin: auto none;
+}
+
+.card {
+  position: absolute; 
+  height: fit-content;
+  width: 55vw;
+  border-radius: var(--borderRadius);
+  box-shadow: -1rem 0 3rem black;
+  transition: height 1s ease-in-out;
+  background: #282828;
+}
+
+.card ul {
+  list-style: none;
+  font-style: bold;
+  padding: none;
+  padding-left: 2%;
+  margin: 2%;
+}
+.card ul li::marker {
+  content: none;
+}
+.card ul ul li{
+  padding: 0px;
+  padding-left: 1ch;
+}
+.card ul ul li::marker {
+  content: "•" ;
+}
+
+.card:nth-child(1) { 
+  margin-top: var(--margin-top);
+  margin-left: var(--margin-left);
+  z-index: 100; 
+  background-color: lightcoral;  
+  background-image: radial-gradient(lightpink 0.8px,transparent 0);
+  background-size: 3px 3px;
+  background-position: -2px -2px;
+}
+.card:nth-child(2) { 
+  color: darkgreen;
+  margin-top: calc(var(--margin-top) + 8ch);
+  margin-left: calc(var(--margin-left) + 5ch);
+  --fundoCard: lightgreen; 
+  background: var(--fundoCard);  
+  z-index: 99; 
+  background-color: lightgreen ;  
+  background-image: radial-gradient(#aaffff 0.8px,transparent 0);
+  background-size: 5px 5px;
+  background-position: -5px -5px;
+}
+.card:nth-child(3) { 
+  color: brown;
+  margin-top: calc(var(--margin-top) + 16ch);
+  margin-left: calc(var(--margin-left) + 10ch);
+  --fundoCard: lightskyblue; 
+  z-index: 98; 
+  background-color: #ffffea;  
+  background-image: radial-gradient(#aaffbb 0.8px,transparent 0);
+  background-size: 5px 5px;
+  background-position: -5px -5px;
+}
+.card:nth-child(4) { 
+  color: #0066dd;
+  margin-top: calc(var(--margin-top) + 24ch);
+  margin-left: calc(var(--margin-left) + 15ch);
+  z-index: 97; 
+  background-color: #d6e6ff;  
+  background-image: radial-gradient(#cbcbcb 0.8px,transparent 0);
+  background-size: 5px 5px;
+  background-position: -15px -15px;
+}
+.card:nth-child(5) { 
+  color: black;
+  margin-top: calc(var(--margin-top) + 32ch);
+  margin-left: calc(var(--margin-left) + 20ch);
+  z-index: 96; 
+  background-color: #ffe6ff;  
+  background-image: radial-gradient(#lightpink 0.8px,transparent 0);
+  background-size: 5px 5px;
+  background-position: -15px -15px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px){
+  .card:nth-child(5) { 
+    right: 1px !important;
+  }
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  transition: 0.4s ease-out;
+}
+
+.top {
+  transition: 1s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  height: 5px;
+  width: 150px;
+}
+
+.card:hover {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+.decorate {
+  position: relative;
+  top: 2rem;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+.decorate img{
+  border-radius: 100%;
+  max-width: 50%;
+  border: 3px solid black;
+}
+
+.topo {
+}
+.body {
+  padding: 0ch;
+  padding-top: 4ch;
+  padding-bottom: 1ch;
+  color: white;
+  border-radius: 0px 0px var(--borderRadius) var(--borderRadius);
+  background: var(--vidro);
+  margin: 0px;
+  border-top: 2px solid black; 
+  width: 100%;
+}
+
+.contact {
+  max-width: 40%;
+  padding: 1ch;
+}
+
+.social img {
+  border: 2px solid black;
+  border-radius: 100%;
+  max-width: 30%;
+  padding: 0px;
+  margin: 1ch;
+}
+.social a {
+}
+
+p.crm, 
+p.textcenter {
+  padding: 0px;
+  text-align: center;
+  color: white;
+  white-space: nowrap;
+}
+p.textcenter {
+  font-family:  "Stalemate";
+  font-size: 2.5rem;
+  font-style: bold;
+}
+.crm {
+  font-size: 14px;
+}
+
+.next,
+.previous {
+  display: none;
+  position: absolute;
+  top: 40%;
+  width: 10%;
+  height: 10%;
+}
+.next img,
+.previous img {
+  background: white;
+}
+.next {
+  right: -5ch;
+}
+.previous {
+  left: -5ch;
+}
+.card a {
+  color: lightblue;
+  font-weight: 500;
+}
+
+hr {
+  width: 30%;
+}
