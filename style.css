@@ -268,7 +268,7 @@ h4::before, h5::before, h6::before {
 }
 .body {
   padding: 0ch;
-  padding-top: 4ch;
+  padding-top: 10%;
   padding-bottom: 1ch;
   color: white;
   border-radius: 0px 0px var(--borderRadius) var(--borderRadius);
